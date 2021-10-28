@@ -1,0 +1,148 @@
+/* SELECTORES AVANZADOS */
+.caja {
+  border: 1px black solid;
+}
+/* div p {
+color: red;
+} 
+div > p {
+color: green;
+}
+div + p {
+color: hotpink;
+}
+div ~ p {
+color: orange;
+}*/
+
+/* PSEUDO CLASES */
+#pc :first-child {
+  color: red;
+}
+
+#pc :last-child {
+  color: violet;
+}
+
+#pc :nth-child(4) {
+  color: yellowgreen;
+}
+
+#pc a:link {
+  font-weight: bolder;
+  color: brown;
+}
+
+#pc a:hover {
+  color: turquoise;
+}
+
+#pc a:visited {
+  color: grey;
+}
+
+#pc a:active {
+  font-size: 40px;
+}
+
+/* PSEUDO ELEMENTOS */
+#pe1::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+#pe2::first-line {
+  color: greenyellow;
+}
+
+#pe3::before {
+  content: "🔥";
+}
+
+#pe3::after {
+  content: "😻";
+}
+
+/* 🔥 TRANSITION 🔥  */
+/* ⛸  PATINADORA ⛸ */
+
+#container {
+  overflow: hidden;
+  border-bottom: 30px black solid;
+}
+
+#patin {
+  margin-top: 30px;
+  background-image: url(../img/patin2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+  width: 800px;
+}
+
+#container:hover #patin {
+  margin-left: 100%;
+  transition: all 2s;
+  transition-timing-function: cubic-bezier(1, 0.46, 0.48, 1);
+}
+
+/* 🎥 ANIMACIONES */
+
+#animacion {
+  width: 200px;
+  height: 200px;
+  background-color: forestgreen;
+  margin: auto;
+  animation: redondeo 2.5s 1s infinite alternate;
+}
+
+@keyframes redondeo {
+  0% {
+    border-radius: 0 0 0 0;
+    background-color: forestgreen;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background-color: orange;
+    transform: rotate(45deg);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background-color: turquoise;
+    transform: rotate(90deg);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background-color: yellow;
+    transform: rotate(135deg);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    background-color: hotpink;
+    transform: rotate(180deg);
+  }
+}
+
+/* REPASO PARA ACTIVIDADES CSS DE LA PLATAFORMA */
+p {
+  color: black; /* #FFFFFF #FFF rgb(255,255,255)*/
+}
+
+p {
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
+
+#test1 {
+  border-color: blue red green yellow;
+  border-style: solid;
+  border-width: 3px;
+  top: 30;
+  padding: -50px;
+}

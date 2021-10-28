@@ -1,0 +1,156 @@
+/* SELECTORES AVANZADOS */
+.caja {
+  border: 1px slateblue solid;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+#bro2 + p {
+  color: coral;
+}
+
+#bro8 ~ p {
+  color: green;
+}
+
+.caja * {
+  color: blue;
+}
+
+/* PSEUDO CLASES */
+#pseudoclases :first-child {
+  color: red;
+}
+
+#pseudoclases :last-child {
+  font-size: 30px;
+}
+
+#pseudoclases :nth-child(5) {
+  background-color: darkblue;
+  color: white;
+}
+
+#l1:link {
+  color: orange;
+}
+
+#l1:hover {
+  border: 10px violet dotted;
+}
+
+#l1:visited {
+  color: turquoise;
+}
+
+#l3:active {
+  font-size: 50px;
+}
+
+/* PSEUDO ELEMENTOS */
+
+#p1::first-letter {
+  color: red;
+  font-size: xx-large;
+}
+
+#p2::first-line {
+  color: orangered;
+}
+
+#p3::selection {
+  color: gold;
+  background-color: hotpink;
+}
+
+#p3::before {
+  content: "😻 ";
+}
+
+#p3::after {
+  content: "🔥";
+}
+
+/* 🔥 TRANSITION 🔥  */
+/* ⛸  PATINADORA ⛸ */
+
+#container {
+  overflow: hidden;
+  border-bottom: 30px black solid;
+}
+
+#container:hover #patin {
+  /* opacity: 0; */
+  margin-left: 100%;
+  transition: all 2s;
+  transition-timing-function: cubic-bezier(1, 0.46, 048, 1);
+}
+
+#patin {
+  margin-top: 30px;
+  background-image: url(../img/patin2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+  width: 800px;
+}
+
+/* 🎥 ANIMACIONES */
+
+#animacion {
+  width: 200px;
+  height: 200px;
+  background-color: forestgreen;
+  margin: auto;
+  animation: redondeo 2.5s 1s infinite alternate;
+}
+
+@keyframes redondeo {
+  0% {
+    border-radius: 0 0 0 0;
+    background-color: forestgreen;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background-color: orangered;
+    transform: rotate(45deg);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background-color: turquoise;
+    transform: rotate(90deg);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background-color: hotpink;
+    transform: rotate(135deg);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    background-color: yellow;
+    transform: rotate(180deg);
+  }
+}
+
+ /* REPASO CASCADING STYLE SHEETS CSS */
+#pp1 {
+color: blue;
+font-weight: bold;
+}
+
+#pp2 {
+color: white; /* rgb(255,255,255) #FFFFFF #FFF  */
+}
+
+p {
+font-weight: bold;
+}
+
+#pp3 {
+font-size: 20px;
+color: blue;
+font-weight: bold;
+padding: -10px;
+}
+
